@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Futuristic Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css + Orbitron font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Your original styles here… */
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at top, #0f0f1a, #05050a);
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://i.ibb.co/7V0n9w9/particles.png');
+      opacity: 0.1;
+      z-index: -1;
+    }
+    .navbar {
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,255,255,0.3);
+    }
+    .navbar-brand, .nav-link {
+      color: cyan !important;
+      transition: color 0.3s;
+    }
+    .nav-link:hover { color: #ff00ff !important; }
+    .hero { text-align: center; padding: 80px 20px; background: transparent; }
+    .hero img {
+      width: 160px;
+      border-radius: 50%;
+      border: 4px solid cyan;
+      box-shadow: 0 0 20px cyan;
+    }
+    .typewriter {
+      font-size: 1.3rem;
+      color: cyan;
+      text-shadow: 0 0 10px cyan;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid cyan;
+      animation: typing 3s steps(30) 1s forwards, blink 0.7s step-end infinite;
+    }
+    @keyframes typing { from { width: 0; } to { width: 100%; } }
+    @keyframes blink { 50% { border-color: transparent; } }
+    section {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(0,255,255,0.2);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
+    }
+    .skills .badge {
+      background: rgba(0,255,255,0.2);
+      border: 1px solid cyan;
+      color: cyan;
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    .skills .badge:hover {
+      background: cyan;
+      color: black;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px cyan;
+    }
+    .project-card {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(0,255,255,0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .project-card img {
+      width: 100%;
+      display: block;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px cyan;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: rgba(255,255,255,0.7);
+      border-top: 1px solid rgba(0,255,255,0.2);
+      margin-top: 40px;
+    }
+    .btn-neon {
+      background: transparent;
+      border: 2px solid cyan;
+      color: cyan;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .btn-neon:hover {
+      background: cyan;
+      color: black;
+      box-shadow: 0 0 15px cyan;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">MyPortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="1750438581154.jpg" alt="Profile Picture">
+    <h1 class="fw-bold mt-3" style="color: #ff00ff;">Hi, I'm <span>[Shete Abhishek]</span></h1>
+    <p class="typewriter">Web Developer | Designer | Tech Enthusiast</p>
+    <a href="#contact" class="btn btn-neon mt-3">Hire Me</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container">
+    <h2 style="color: #ff00ff;">About Me</h2>
+    <p>
+      I’m a passionate web developer with a love for creating modern, user-friendly websites.
+      My goal is to blend beautiful design with clean, efficient code to make the web a better place.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container skills">
+    <h2 style="color: #ff00ff;">Skills</h2>
+    <span class="badge">HTML5</span>
+    <span class="badge">CSS3</span>
+    <span class="badge">JavaScript</span>
+    <span class="badge">Bootstrap</span>
+    <span class="badge">React</span>
+    <span class="badge">Node.js</span>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container">
+    <h2 style="color: #ff00ff;">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="project1.webp" alt="E-Commerce Website">
+          <div class="p-3">
+            <h5>E-Commerce Website</h5>
+            <p>Responsive store built with HTML, CSS, JS, Bootstrap.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="project2.webp" alt="Portfolio Website">
+          <div class="p-3">
+            <h5>Portfolio Website</h5>
+            <p>Modern personal portfolio showcasing skills & projects.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="project3.webp" alt="Blog Platform">
+          <div class="p-3">
+            <h5>Blog Platform</h5>
+            <p>Responsive blogging site with search and comments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="container mt-5 mb-5">
+  <h2 class="mb-3">Contact Me</h2>
+  <div class="glass p-4">
+    <form id="contact-form">
+      <input type="text" id="name" name="name" class="form-control mb-3" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+      <textarea id="message" name="message" class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-neon">Send Message</button>
+    </form>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 [Shete Abhishek]. All Rights Reserved.</p>
+  </footer>
+
+  <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("iAlxX4lVaPnjT2jM6"); // your Public Key
+  })();
+
+  // Attach submit event
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop page reload
+
+    const params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_t84f4xu", "template_exsdxld", params)
+      .then(function(response) {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      }, function(error) {
+        console.error("FAILED...", error);
+        alert("Oops! Something went wrong. Please try again.");
+      });
+  });
+  </script>
+</body>
+</html>
