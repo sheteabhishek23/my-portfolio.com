@@ -119,7 +119,14 @@
     /* Mobile fixes */
     @media (max-width: 576px) {
       .hero img { width: 120px; }
-      .typewriter { font-size: 1rem; }
+      /* Disable typewriter effect on small screens */
+      .typewriter {
+        font-size: 1rem;
+        white-space: normal;
+        overflow: visible;
+        border-right: none;
+        animation: none;
+      }
     }
   </style>
 </head>
@@ -147,7 +154,7 @@
   <section class="hero">
     <img src="1750438581154.jpg" alt="Profile Picture">
     <h1 class="fw-bold mt-3" style="color: #ff00ff;">Hi, I'm <span>[Shete Abhishek]</span></h1>
-    <p class="typewriter">Web Developer|Designer|Tech Enthusiast</p>
+    <p class="typewriter">Web Developer | Designer | Tech Enthusiast</p>
     <a href="#contact" class="btn btn-neon mt-3">Hire Me</a>
   </section>
 
